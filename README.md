@@ -1,187 +1,113 @@
-## Reggie
-A web browser extension for desktop and Android for new, helpful features for Youtube live streams.
+<!-- /* Copyright 2023 biolithic. All rights reserved. */ -->
 
-## What is it?
-This is a browser extension that adds extra functionality to Youtube videos and livestreams.
-It can help you configure and search live stream chat to be more usable and useful to you.
+## Welcome!
 
-## Installation for desktop/laptop
-1) download the zip file and upzip it
-2) open your web browser and at chrome://extensions/ (example address) 
-3) Click "Load Unpacked" and select the folder you just unzipped
-4) you should see Reggie 1.0.0 active on this screen.
-5) questions?  look up installing browser extensions on Chrome, the process is the same for all.
+Thank you for downloading and trying this!  Written by a single person in the USA, we hope this helps you keep up with chat in small to large live streams. If you have any questions, comment, bugs or ideas on how to make this better, please visit https://beacons.ai/reggietv and send them there. Thanks!
 
-## Installation for mobile/phone
-1) this has only been tested on Android phones currently.
-2) use a Chrome-based browser which can use browser extensions like the Kiwi browser or Samsung browser.
-3) download the zip file 
-4) open your web browser and at kiwi://extensions/ (example address) 
-4) Click "load zip/crx" and select the download you just saved
-4) you should see Reggie 1.0.0 active on this screen.
-5) questions?  look up installing browser extensions on Android, the process is the same for all.
 
-## Don't like it?
-If you do not like it, you can disable or uninstall it with no issues.
-All features can be turned on and off individually -- you choose which you want to use and how.
+## Basic Overview
 
-## Supported browsers
-Google Chrome, Brave Browser, Microsoft Edge, Vivaldi, Epic, Torch, Opera GX Gaming, Kiwi
+Installing this in your browser will enhance the streaming and chatting experience on livestreams on desktop and laptop computers, and on mobile Android devices for the Kiwi browser.
 
-## Does this work on iPhones, iPads, Windows Phones, Surfaces, Firefox, or something you haven't mentioned here?
+
+## How to use this for desktop/laptop usage
+
+This free browser extension is an add-on or plugin or extension to browsers such as Google Chrome, Brave Browser, Microsoft Edge, Vivaldi, Epic, Torch, Opera GX Gaming, and others. It can be completely added or removed at any time, and the site will continue to work separately as is. This doesn't change the basic functionality of any website or app.
+
+
+## How to use this for Android phones and devices.
+
+This free extension is an add-on or plugin or extension to mobile Android devices using Kiwi browser. It can be completely added or removed at any time, and the site will continue to work separately separately as is. You can find Kiwi browser in the Google Play Store or F-Droid Store or APKpure.com or at https://kiwibrowser.com/ . It is based on Google Chrome browser but with the added ability to use browser extensions like on desktop. This provides extra features for the website version in the Kiwi browser, not the app. It may work with Samsung browser or other mobile browsers which can install extensions (plugins).
+
+
+## Which websites does it work on now?
+Live streams on Youtube.com
+
+
+## 🔧 Install it!
+
+1. Download & extract the [latest🧪version] 
+
+2. _Go to your Browser's Extensions page (chrome://extensions or brave://extensions or similar)_ 
+
+3. _Activate "Developer mode"_ (top right)
+
+4. _Click the "Load unpacked" button _& Select the extracted folder_
+
+
+#### Web browser support 
+|[<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/brave/brave_48x48.png" alt="Brave" width="28px" />](https://brave.com)</br>Brave | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chromium/chromium_48x48.png" alt="Chromium" width="28px" />](https://github.com/chromium/chromium)</br>Chromium | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" />](https://chrome.google.com/webstore/detail/improve-youtube-open-sour/bnomihfieiccainjcjblhegjgglakjdd)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="Edge" width="24px" height="24px" />](https://www.microsoft.com/edge)</br>Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" />](https://addons.opera.com/en/extensions/details/install-chrome-extensions/)</br>Opera|  [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/vivaldi/vivaldi_48x48.png" alt="Vivaldi" width="24px" height="24px" />](https://github.com/ric2b/Vivaldi-browser)</br>Vivaldi |
+| --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- |
+| 0.52+ | 49.0+ | 49.0+ | 79.0+ | 44.0+ | 36.0+ | x.x+ | 1.0+ |
+
+
+## Does this work on iPhones, iPads, Windows Phones, Firefox, or something you haven't mentioned here?
+
 No.
 
-## Support
-Discord: 
-Twitter:
-Email:
-Developer: biolithic_andy
+
+## Tracking/Security
+
+This extension saves information to your browser locally if you choose such as options/preferences you set, chat that you save, and browser version which you can export out to yourself via CSV file and is deleted when you uninstall the extension. We save none of your options/preferences "in the cloud" at this time.  We currently use no tracking or advertising or cookies at this time of 4/2023. This may change and you will be notified if it does. We are currently a very small team and do not have time or resources for large privacy policy scope or legal/public relations/social/customer service policy other than to provide the basic technical features needed to the streamers for their usage.
 
 
-Usage on videos:
+## How to get help with using this or questions or issues
 
-View previously saved chat on past stream:
-1a) watch a stream and save the chat using this extension
-1b) or have someone give you the exported chat file
-2b) load the video the chat is from. You can also manually import the chat to view on the side using this extension drop down menu
+You may email us at: reggieapptv@gmail.com .
+This help document might help you: https://github.com/ImprovedTube/YouTube-Extension/discussions/753
+This help document might help you: https://github.com/ParticleCore/Particle/wiki/Report-a-problem
+This help document might help you: https://github.com/night/betterttv/issues
 
-View previously saved chat on past streams from Youtube or Twitch:
-1a) watch a stream and save the chat using this extension
-1b) or have someone give you the exported chat file
-2) upload your video of the stream to Youtube
-3) load the video on Youtube. You can manually import the chat to view on the side using this extension drop down menu
+## Option Menu
+
+- This extension adds an option menu to the website where you can save options for yourself which will happen on each page load. The options/preferences are saved to your computer and not sent out to the internet.
 
 
-Usage on livestreams:
-Load an active livestream with chat on Youtube:
-- if this is working, you will see loading messages pop up in the bottom right hand corner of the screen
-- in the top right corner of your browser, you will see either a puzzle piece icon or a green keyboard icon. Click on it.
-- if puzzle piece, click on the pin icon next to the Reggie green keyboard icon.
-- if you see the green keyboard icon, click on it to toggle the extension main menu.
+## Export / Offline
 
-Main Menu:
-When the menu is open, you will see a list of icons on the right hand side of the screen. 
-Most of these icons are 1 time toggle on/off switches on the current chat.
-From top to bottom, here are the icons and their actions:
-- the cog is the settings menu
-- the crown is to toggle broadcaster only chat or all chat
-- the wrench is to toggle moderator only chat or all chat
-- the money bag is to toggle supporter only chat or all chat
-- the money bag + wrench is to toggle supporter and moderator only chat or all chat
-- the dollar sign is to toggle supporter only chat or all chat
-- the @ sign is to toggle mention chat or all chat
-- the # sign is to toggle hashtag chat or all chat
-- the ab sign is to toggle text only chat or full chat (hide emojis, usernames, clutter)
-- the up arrow is to scroll to the top of the live chat
-- the down arrow is to scroll to the bottom of the live chat
-- the aA is to change the font size of chat
-- the * sign is to toggle full height and/or full weight of chat sidebar
-- the magnifying glass is to toggle searching of the current stream chat
-- the magnifying glass + is to toggle searching of all saved stream chats on this device from Youtube
-
-Search Menu:
-When the magnifying glass is pressed, the search menu appears.
-- When the search menu is active, the main menu icons work on the chat appearing in the search menu overlay
-- When the search menu is hidden, the main menu icons work on the chat appearing in the Youtube sidebar
-- When the search menu is active, type a phrase in the search bar.
-- The @ button will search saved chat for the phrase starting the message. Search for dog will find "dogs are cute" but NOT "your dog is cute."
-- The user button will search saved chat the user writing the message. Search for dog will find what the username dog wrote in the chat.
-- The abc button will search saved chat for the phrase in the message. Search for dog will find "dogs are cute" AND "your dog is cute."
-- The full button will find all saved messages you have saved from this chat so far.
-
-Options Menu:
-Press the cog icon in the main menu to open the options menu.
-The options menu is divided into these sections:
-- Theme 
-- Highlight
-- Mute/Dim
-- Hide
-- Features
-- Saved Chats
-- Import Chats
-- Share
-
-THEME
-background color of chat
-user name color in chat
-chat color of highlighted chats
-message color in chat
-font size in chat
-text only chat
-
-HIGHLIGHT
-highlight sub messages in this color
-highlight moderator messages color in this color
-highlight @ mention messages color in this color
-highlight hashtag messages color in this color
-highlight VIP messages in this color and larger font
-personal VIP List
-highlight these words in chat in larger font
-
-MUTE/DIM
-mute non moderator/sub messages in chat
-mute owner/streamer messages in chat.
-mute @ mention messages in chat
-mute bot messages/commands in chat
-mute follow alert messages in chat.
-mute subscribe alert messages in chat
-
-HIDE
-hide non moderator/sub messages in chat.
-hide owner/streamer messages in chat.
-hide @ mention messages in chat.
-Hide bot/command messages in chat
-hide follow alert messages in chat.
-hide subscribe alert messages in chat.
-hide these words in chat.
-hide chats from these usernames in chat
-hide website links in chat.
-hide usernames on screen chat.
-
-FEATURES
-turn on basic keybinds for chat commands.
-turn on full keybinds for chat commands.
-turn on voice commands
-turn on auto-saving of chat
-turn on auto-showing of chat on screen.
-left handed chat
-upside down chat
-mouseover enlarge chat font size
+- This extension can export chat logs from live streams in CSV form.  These can be viewed in a spreadsheet program to view offline if later you do not have a network connection.
 
 
-SAVED CHATS
-This tab keeps the saved chats on your device for you to view at any time, export out or delete.
+## Be Featured
 
-IMPORT CHATS
-This tab you can import chat csv files to view on your device.
+- If you use this browser extension in your streaming and would like to be featured on one of our webpages, reach out to us and let us know!  Thanks!
 
-SHARE
-This tab you can build your own share menu for your device to use.
 
-FEATURES EXPLAINED
-- basic keybinds
-You can start using ALT+1, ALT+2, ALT+3, ALT+4 for controlling chat and screen commands on your desktop/laptop
-This is not recommended while gaming and streaming on same keyboard.
+## Source/Funding/Leadership/etc
 
-- full keybinds
-You can start using ALT+A, ALT+S, etc... for controlling chat and screen commands on your desktop/laptop
-This is not recommended while gaming and streaming on same keyboard.
+This is currently funded/hosted 100% by the creator/developer, who is a person not associated with any live streaming or video/media company in any formal way. This is not funded or associated with any major corporation such as Amazon, Google, Microsoft, or Odysee.com, Rumble.com, Glimesh.tv, Locals.com or Kick.com.
 
-- voice commands
-- In the desktop/laptop Google Chrome version, you can test out using voice commands for controlling chat and screen commands
-This is not recommended while gaming and streaming on same keyboard.
 
-- chat is automatically saved to this device as it displays on a live stream
-This uses some computer memory.
+## How to help
 
-- needs auto-saving -- chat is automatically displayed over the video on a live stream instead of on the sidebar.
-This uses some computer memory.
+- If you have ideas and would like to help in programming, UI design or funding, you may email us at: KickstarrTV@proton.me .  Thanks!
 
-- left handed chat
-Chat is on the left side of the video.
 
-- upside down chat
-Chat is newest at the top, oldest at the bottom.
+## Source
 
-- mouseover
-When you mouseover the chat or emojis, they enlarge in size so that you can see them better.
+- This is released as open-source so that you, if able, can alter this extension yourself and use to your liking or review for anything malicious and remove it if need be.
+
+
+## Voice Features
+
+- This extension provides voice activation features for controlling the live stream chat. These features are optional and can be turned on or off at any time. When the voice activation is turned on, your computer web browser is always listening for you to say certain voice commnds and the goal is hands-free scrolling, searching and manipulation of the live stream chat on your computer.
+
+
+## Keybind Features
+
+- This extension provides keyboard keybind features for controlling the live stream chat. These features are optional and can be turned on or off at any time. When the keybind is turned on, your computer web browser is always listening for you to push certain keybinds and the goal is mouse-free scrolling, searching and manipulation of the live stream chat on your computer.
+
+
+## Version A
+
+- This is released under Google Chrome Manifest version 3 (2022) and may only work with browsers/operating systems updated in 2022 and beyond.
+
+
+## Version B
+
+- This is released in 2023 and version 1.0 is an early access version for mass testing, quality assurance and bug fixing. This extension will be updated in 2023 most likely on Sundays as issues and features are raised by the community and fixed. The latest version will appear on https://ReggieApp.github.io .
+
+
+## License
+
+This is released under [GNU 3 license]https://www.gnu.org/licenses/gpl-3.0.en.html . Copyright (c) 2023 biolithic

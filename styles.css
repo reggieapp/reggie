@@ -1,0 +1,728 @@
+/* Copyright 2023 biolithic. All rights reserved. */
+ input:invalid+span:after {
+     position: absolute;
+     content: '✖';
+     padding-left: 3px;
+}
+ input:valid+span:after {
+     position: absolute;
+     content: '✓';
+     padding-left: 3px;
+}
+ .scbt-youtube input:focus {
+     color: #495057;
+     border-color: rgb(204, 0, 0);
+     outline: 0;
+     box-shadow: 0 0 0 4px rgb(121 82 179 / 25%);
+}
+/* ChatMenu */
+ #scbtChatMenu {
+     min-width: fit-content;
+     width: 100%;
+     position: absolute;
+     z-index: 100000000;
+     background: lightgrey;
+     top: 43vh;
+     left: 0px;
+     height: 50px;
+     align-items: center;
+     justify-content: space-between;
+     display: none;
+}
+ #scbtChatMenu.scbt-bl {
+     display: block;
+}
+ #scbtChatMenu.scbt-fl {
+     display: flex;
+}
+ #scbtChatSearchInputText {
+     width: 30%;
+     height: 50px;
+     background: lightgray;
+     color: #000;
+}
+ #scbtChatMenu button {
+     justify-content: space-between;
+     height: 50px;
+     background: black;
+     color: white;
+     cursor: pointer;
+     min-width: 60px;
+     padding-left: 0.5rem;
+     display: flex;
+}
+ #scbtChatMenu button.scbt-multiple {
+     background: green;
+}
+ body.scbt-youtube.scbt-desktop #scbtChatMenu button:hover {
+     background: #111;
+     font-size: 1.6rem;
+}
+ body #chat-column #scbtChatMenu {
+     position: relative;
+     top: auto;
+     width: 90%;
+     min-width: min-content;
+}
+ body.scbt-youtube.scbt-desktop #scbtChatMenu {
+     top: 40px;
+     height: 40px;
+     width: 400px;
+}
+ body.scbt-youtube.scbt-desktop #scbtChatWrapper {
+     top: 46px;
+     background: transparent;
+     width: -webkit-fill-available;
+     max-width: 1000px;
+}
+ body.scbt-youtube.scbt-desktop #scbtChatWrapper {
+     top: 75px;
+     background: transparent;
+     top: 75px;
+     max-height: 70vh;
+     height: 70vh;
+     padding-left: 0.3rem;
+}
+ body.scbt-youtube.scbt-desktop #scbtChatContent {
+     background: rgba(0, 0, 0, 0.67);
+     max-width: 1000px;
+     z-index: 10000;
+     height: auto;
+     overflow-y: visible;
+}
+ #scbtChatSearchStartsWithButton, #scbtChatSearchUserButton, #scbtChatSearchKeywordButton, #scbtChatSearchFullButton {
+}
+/* HelpMenu */
+ #scbtHelpMenu {
+}
+ #scbtKeyboardContainer {
+     display: none;
+     left: 0px;
+     top: 68px;
+     z-index: 999;
+     position: absolute;
+}
+ .keyboard {
+     background-color: #e0e0e0;
+     color: #fff;
+     display: grid;
+     font-family: 'Roboto', sans-serif;
+     font-size: 16px;
+     font-weight: 300;
+     grid-template-columns: repeat(58, 17px);
+     grid-template-rows: repeat(10, 34px);
+     justify-content: center;
+     letter-spacing: 1px;
+     line-height: 24px;
+     padding: 16px;
+     transform-origin: top left;
+}
+ .key {
+     align-items: center;
+     background-color: #212121;
+     color: #fff;
+     border-radius: 4px;
+     cursor: pointer;
+     display: flex;
+     flex-direction: column;
+     grid-column-end: span 4;
+     grid-row-end: span 2;
+     grid-template-columns: repeat(2, 32px);
+     grid-template-rows: repeat(2, 32px);
+     justify-content: center;
+     padding: 5px 9px;
+     margin: 2px;
+}
+ .key.is-arrow-down, .key.is-arrow-up {
+     grid-column-start: 51;
+     grid-row-end: span 1;
+}
+ .key.is-arrow-down {
+     border-radius: 0 0 4px 4px;
+     grid-row-start: 10;
+     margin-top: 1px;
+}
+ .key.is-arrow-up {
+     border-radius: 4px 4px 0 0;
+     grid-row-start: 9;
+     margin-bottom: 1px;
+}
+ .key.is-backspace, .key.is-tab {
+     grid-column-end: span 6;
+}
+ .key.is-backspace {
+     align-items: flex-end;
+}
+ .key.is-capslock {
+     grid-column-end: span 7;
+}
+ .key.is-command {
+     grid-column-end: span 5;
+}
+ .key.is-enter {
+     border-radius: 0 4px 4px 4px;
+     grid-column-start: 56;
+     grid-column-end: span 3;
+     grid-row-end: span 4;
+     position: relative;
+}
+ .key.is-enter::before, .key.is-enter::after {
+     content: '';
+     position: absolute;
+}
+ .key.is-enter::before {
+     background-color: #212121;
+     border-radius: 4px 0 0 4px;
+     height: 64px;
+     left: -16px;
+     top: 0;
+     width: 16px;
+}
+ .key.is-enter::after {
+     border-top-right-radius: 4px;
+     box-shadow: -4px 4px 0 0 #212121 inset;
+     cursor: default;
+     height: 8px;
+     left: -4px;
+     top: 60px;
+     width: 8px;
+}
+ .key.is-enter .key__top {
+     height: 54px;
+}
+ .key.is-left, .key.is-right {
+     font-size: 12px;
+     justify-content: space-between;
+     line-height: 20px;
+}
+ .key.is-left {
+     align-items: flex-start;
+}
+ .key.is-right {
+     align-items: flex-end;
+}
+ .key.is-shift-left, .key.is-shift-right {
+     grid-column-end: span 9;
+}
+ .key.is-space {
+     grid-column-end: span 20;
+}
+ .key.is-tab {
+     align-items: flex-start;
+}
+ .key__bottom, .key__top {
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-end;
+}
+ .key__bottom {
+     flex-grow: 1;
+}
+ .key:hover, .key:focus, .key:active, .is-alt {
+     background-color: #2c49ca;
+}
+ .keyboard aside {
+     background-color: #fff;
+     color: #111;
+     padding: 10px;
+     display: none;
+     position: absolute;
+     top: 10%;
+     left: 25%;
+}
+ button:focus + aside, button:hover + aside {
+     display: block;
+}
+/* OptionsMenu */
+ #scbtOptionsMenu {
+     position: absolute;
+     height: 33%;
+     width: 33%;
+     z-index: 1000000;
+     right: 45px;
+     color: #111;
+     background: #ff0000;
+     min-height: 200px;
+     position: absolute;
+     top: 0px;
+     overflow-y: scroll;
+     display: none;
+}
+ #scbtOptionsMenu.scbt-bl {
+     display: block;
+}
+ #scbtOptionsMenu.scbt-fl {
+     display: flex;
+}
+ #scbtOptionsMenu form, #scbttwelve {
+     padding: .5rem;
+}
+ #scbtOptionsMenu small {
+     font-size: x-small;
+}
+ body.scbt-youtube.scbt-mobile #scbtOptionsMenu small {
+     display: none;
+}
+ body.scbt-youtube.scbt-mobile #scbtOptionsMenu {
+     width: 85%;
+     top: initial;
+     bottom: 180px;
+     position: absolute;
+     height: 160px;
+}
+ #scbtSubmitButton, #scbtSocialSubmitButton {
+     margin-top: 10px;
+     height: 55px;
+     width: 100px;
+     padding: 1rem;
+     position: fixed;
+     top: 5rem;
+     right: 7rem;
+     cursor: pointer;
+}
+ #scbtSocialSubmitButton {
+     width: 9rem;
+     right: 10px;
+     top: 8rem;
+}
+ body.scbt-youtube.scbt-mobile #scbtSocialSubmitButton {
+     background-color: beige;
+}
+ body.scbt-youtube.scbt-mobile #scbtSocialSubmitButton {
+     background-color: beige;
+}
+ #scbtSubmitButton, #scbtCancelOptionsMenu {
+     display: block;
+     position: absolute;
+     top: 0px;
+     right: 5px;
+}
+ #scbtCancelOptionsMenu {
+     top: 95px;
+}
+ body.scbt-youtube.scbt-mobile #scbtSubmitButton, body.scbt-youtube.scbt-mobile #scbtCancelOptionsMenu {
+     display: none;
+}
+ #scbtStatus {
+     margin-top: 5px;
+     padding: 10px;
+     color: green;
+}
+ #scbtOptionsMenu p, #scbtChatPreviousTitle b, #scbtOptionsTitle b {
+     cursor: pointer;
+     font-size: large;
+     padding-bottom: 1rem;
+}
+ .scbt-options-wrapper {
+     display: none;
+}
+ body.scbt-youtube.scbt-desktop #scbtOptionsTitle, body.scbt-youtube.scbt-mobile #scbtOptionsTitle, body.scbt-youtube.scbt-desktop #scbtChatPreviousTitle, body.scbt-youtube.scbt-mobile #scbtChatPreviousTitle {
+     display: block;
+}
+ body.scbt-youtube.scbt-desktop #scbtOptionsWrapper, body.scbt-youtube.scbt-mobile #scbtOptionsWrapper, body.scbt-youtube.scbt-desktop #scbtChatPreviousWrapper, body.scbt-youtube.scbt-mobile #scbtChatPreviousWrapper {
+     display: none;
+}
+ body.scbt-youtube.scbt-mobile #scbttwelve, body.scbt-youtube.scbt-desktop #scbttwelve {
+     display: block;
+}
+/* wrappers */
+ #scbtChatTitle {
+}
+ body.scbt-youtube.scbt-desktop #scbtChatTitle {
+     position: absolute;
+     top: 6rem;
+     right: 130px;
+     color: #777;
+     z-index: 1000;
+     font-size: 1.5rem;
+}
+ #scbtChatA {
+}
+ #scbtChatB {
+}
+ #scbtChatWrapper {
+     overflow-y: scroll;
+     z-index: 10000;
+     background: #222;
+     opacity: 1;
+     padding: .7rem;
+     position: absolute;
+     top: 50vh;
+     left: 0px;
+     width: 100%;
+     font-size: 1.4rem;
+     color: #ccc;
+     display: none;
+}
+ #chat-column #scbtChatWrapper {
+     position: relative;
+     top: auto;
+     font-size: 1rem;
+     padding: 0px;
+     background-color: rgb(14, 23, 38);
+}
+ #scbtChatWrapper.scbt-bl {
+     display: block;
+}
+ #scbtChatWrapper.scbt-fl {
+     display: flex;
+}
+ #scbtChatWrapper b {
+     color: #fff;
+}
+
+ #scbtCloseButton {
+     position: absolute;
+     right: 40px;
+     cursor: pointer;
+     z-index: 10000000;
+}
+ #scbtCloseButton:hover {
+     opacity: 1;
+}
+ #scbtCloseButton:before, #scbtCloseButton:after {
+     position: absolute;
+     left: 15px;
+     content: ' ';
+     height: 33px;
+     width: 2px;
+     background-color: #ddd;
+}
+ #scbtCloseButton:before {
+     transform: rotate(45deg);
+}
+ #scbtCloseButton:after {
+     transform: rotate(-45deg);
+}
+ #scbtToggleButton, #scbtToggleButton2 {
+     position: absolute;
+     font-size: xx-large;
+     color: silver;
+     background: transparent;
+     line-height: .5rem;
+     z-index: 11111111;
+     left: 170px;
+     top: 0px;
+     margin-top: -5px;
+     display: none;
+     cursor: pointer;
+}
+ .scbt-youtube #scbtToggleButton2 {
+     left: 170px;
+}
+ .scbt-youtube #scbtToggleButton2 div {
+     width: 30px;
+     height: 5px;
+     background-color: silver;
+     margin: 6px 0;
+}
+ .scbt-youtube #scbtToggleButton:hover, .scbt-youtube #scbtToggleButton:click {
+     background: #999;
+}
+ body.scbt-mobile.scbt-youtube #scbtToggleButton2 {
+     display: block;
+}
+ body.scbt-mobile.scbt-youtube #scbtToggleButton2 {
+     left: 100px;
+     top: 10px;
+}
+
+body.scbt-desktop.scbt-youtube #scbtToggleButton2 {
+     display: none;
+}
+
+ body.scbt-mobile.scbt-youtube #scbt9, body.scbt-mobile.scbt-youtube #scbt8, body.scbt-mobile.scbt-youtube #scbt12, body.scbt-mobile.scbt-youtube #scbt10, body.scbt-mobile.scbt-youtube #scbt16, body.scbt-mobile.scbt-youtube #scbt17, body.scbt-mobile.scbt-youtube #scbt21 {
+     display: none;
+}
+ body.scbt-mobile #scbt2.focused {
+     background: darkslategrey;
+}
+/* scbtSideMenu background-color: rgb(0, 0, 0, .2);
+ */
+ #scbtSideMenu {
+     position: absolute;
+     z-index: 10000;
+     color: #111;
+     position: absolute;
+     top: 36vh;
+     width: 100%;
+     height: 50px;
+     min-height: 50px;
+     background: silver;
+     align-items: center;
+     justify-content: space-between;
+     display: none;
+}
+ #scbtSideMenu.scbt-bl {
+     display: block;
+}
+ #scbtSideMenu.scbt-fl {
+     display: flex;
+}
+ body .dropdown-menu #scbtSideMenu {
+     top: auto;
+     height: 200px;
+     background: transparent;
+     position: relative;
+     overflow-y: scroll;
+     display: block;
+}
+ #scbtSideMenu span {
+     padding-bottom: 1rem;
+     float: left;
+     font-size: 1.5rem;
+     padding-right: 0.5rem;
+     padding-left: 0.5rem;
+     border-right: 1px solid black;
+     justify-content: space-between;
+     display: flex;
+     cursor: pointer;
+}
+ body.scbt-youtube.scbt-desktop #scbtSideMenu {
+     top: 2px;
+     height: 100%;
+     width: 40px;
+     right: 0px;
+}
+ body.scbt-youtube.scbt-desktop #scbtSideMenu span {
+     border: 0px;
+     opacity: .8;
+     font-size: 2rem;
+     min-width: 30px;
+}
+ body.scbt-youtube.scbt-desktop #scbtSideMenu span:hover {
+     opacity: 1;
+     font-size: 2.2rem;
+}
+ body.scbt-youtube.scbt-desktop #scbtSideMenu span:focus, body.scbt-youtube.scbt-desktop #scbtSideMenu span:active {
+     background: rgb(204, 0, 0);
+}
+ body.scbt-youtube.scbt-desktop #scbtSideMenu span:hover, body.scbt-odysee.scbt-desktop #scbtSideMenu span:hover, body.scbt-rumble.scbt-desktop #scbtSideMenu span:hover, body.scbt-twitch.scbt-desktop #scbtSideMenu span:hover {
+     opacity: 1;
+     font-size: 1.7rem;
+}
+ body.scbt-youtube.scbt-desktop #scbtSideMenu span:focus, body.scbt-youtube.scbt-desktop #scbtSideMenu span:active, body.scbt-youtube.scbt-odysee #scbtSideMenu span:focus, body.scbt-youtube.scbt-odysee #scbtSideMenu span:active {
+     background: rgb(204, 0, 0);
+}
+ #scbtSocialMediaShareOptions, #scbtSocialMediaShareCustomOptions {
+     overflow-y: scroll;
+     height: 8rem;
+     background: #bbb;
+     padding-left: 5px;
+}
+ #scbttwelveOptions {
+     padding-top: 2rem;
+     padding-bottom: 2rem;
+     display: block;
+     clear: both;
+}
+ body.scbt-youtube.scbt-mobile #scbtoption1Wrapper, body.scbt-youtube.scbt-mobile #scbtvoice3Wrapper {
+     display: none;
+}
+ #scbttwelveWrapper button {
+     background-color: rgba(var(--color-primary-static));
+     color: white;
+     border-radius: 1rem;
+     padding: 0.5rem;
+}
+ .lawngreen {
+     background: lawngreen;
+}
+/* others */
+ .scbt-bl {
+     display: block;
+}
+ .scbt-fl {
+     display: flex;
+}
+ .scbt-no {
+     display: none;
+}
+ a.disabled, button.disabled {
+     cursor: initial !important;
+}
+ body .vip, body #author-name.yt-live-chat-author-chip.vip {
+     border: 1px solid orange !important;
+}
+ .az1, .az2, .az3, .az4, .az5 {
+     cursor: pointer;
+}
+ .az4, .az5 {
+     padding-left: .5rem;
+     padding-right: .5rem;
+     font-size: 2rem;
+}
+ .share-native-button, .share-menu, .share-copy-button {
+     display: inline-block;
+     float: left;
+}
+ #scbtShareHighlightNativeContainer button {
+     width: 47%;
+}
+ .share-menu {
+     line-height: 2.1;
+}
+ body.scbt-youtube.scbt-mobile .share-menu {
+     line-height: initial;
+     padding-left: 2rem;
+}
+ #shareIMG {
+     float: right;
+     padding-left: 1rem;
+}
+ .sr-only {
+     position: absolute;
+     margin: -1px 0 0 -1px;
+     padding: 0;
+     display: block;
+     width: 1px;
+     height: 1px;
+     font-size: 1px;
+     line-height: 1px;
+     overflow: hidden;
+     clip: rect(0,0,0,0);
+     border: 0;
+     outline: 0;
+}
+ #scbtSnackbar {
+     visibility: hidden;
+     min-width: 250px;
+     background-color: #333;
+     text-align: center;
+     border-radius: 2px;
+     padding: 16px;
+     position: fixed;
+     z-index: 1111111;
+     color: #ccc;
+     right: 0px;
+     bottom: 5px;
+     font-size: medium;
+}
+ #scbtSnackbar.show {
+     visibility: visible;
+     -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+     animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+ #scbtMentionMenu {
+     display: none;
+     position: absolute;
+     z-index: 100;
+     bottom: 70px;
+     right: 5px;
+}
+ #scbtMentionMenu.scbt-bl {
+     display: block;
+     background: silver;
+     padding: 0.5rem;
+}
+ #scbtMentionMenu li {
+     list-style-type: none;
+}
+ #scbtMentionMenu li:active, #scbtMentionMenu li:hover, #scbtMentionMenu li:focus {
+     color: green;
+}
+ #scbtMentionMenu ul {
+     padding-left: 0px;
+     padding-right: 75px;
+     width: 100%;
+}
+ #scbtMentionMenu .emoji-picker {
+     width: fit-content;
+}
+ #scbtMentionMenu .emoji-picker__content {
+     overflow-y: scroll;
+}
+ .emoji-picker__wrapper-shown {
+     display: block !important;
+     position: absolute;
+     transform: translate(1089px, 15px, 0px);
+     inset: auto auto 0px 0px;
+}
+ .chatcolumn-full-height {
+     position: fixed !important;
+     top: 0px;
+     height: 100%;
+     right: 0px;
+}
+ .chat-full-height {
+     max-height: calc(100vh - 1px) !important;
+}
+ .scbt-youtube .form-check-inline {
+     background-color: darkgrey;
+}
+ .scbt-youtube #scbtOptionsMenu {
+     background-color: #25272c;
+     color: #ddd;
+     text-shadow: 1px 1px black;
+}
+ #scbtOptionsMenuForm .scbt-options-title {
+     font-size: 2rem;
+     cursor: pointer;
+}
+ #scbtOptionsMenuForm hr {
+     display: block;
+     height: .5rem;
+     background: silver;
+     margin-top: .5rem;
+     margin-bottom: .5rem;
+}
+
+.scbt-youtube #scbtOptionsMenuForm {
+     font-size: 1.66rem;
+} 
+
+.scbt-youtube #scbtOptionsMenuForm input {
+     color: #000;
+}
+ body.scbt-youtube.scbt-desktop #scbtSideMenu {
+     background-color: transparent;
+}
+ body.scbt-youtube.scbt-desktop #scbtSideMenu span {
+     background-color: silver;
+}
+ body.scbt-youtube.scbt-desktop #scbtChatTitle {
+     float: right;
+     height: 50px;
+     width: auto;
+     position: absolute;
+     right: 0px;
+     z-index: 11;
+}
+ body.scbt-youtube .chat-content {
+     overflow: scroll;
+}
+ body.scbt-youtube.scbt-mobile #scbtToggleButton2 {
+     display: block;
+     top: 0px;
+     background: rgb(83, 252, 24);
+     height: 50px;
+     width: 50px;
+}
+ body.scbt-youtube.scbt-mobile #scbtToggleButton2 div {
+     width: 35px;
+     height: 5px;
+     background-color: black;
+     margin: 6px 0;
+     margin-left: 0.5rem;
+}
+
+body.scbt-desktop.scbt-youtube #scbtToggleButton2 {
+     display: none;
+}
+
+ body.scbt-youtube.scbt-mobile #scbt4, body.scbt-youtube.scbt-mobile #scbt5, body.scbt-youtube.scbt-mobile #scbt6, body.scbt-youtube.scbt-mobile #scbt7, body.scbt-youtube.scbt-mobile #scbt8, body.scbt-youtube.scbt-mobile #scbt9, body.scbt-youtube.scbt-mobile #scbt10, body.scbt-youtube.scbt-mobile #scbt11, body.scbt-youtube.scbt-mobile #scbt12, body.scbt-youtube.scbt-mobile #scbt16, body.scbt-youtube.scbt-mobile #scbt17 {
+     display: none;
+}
+ body.scbt-youtube.scbt-mobile #scbtOptionsMenu {
+     width: 95%;
+     opacity: 75%;
+}
+ body.scbt-youtube.scbt-mobile #scbtOptionsMenu label {
+     color: #222;
+}
+ body.scbt-youtube.scbt-mobile #scbtfeature1Wrapper, body.scbt-youtube.scbt-mobile #scbtfeature2Wrapper, body.scbt-youtube.scbt-mobile #scbtfeature3Wrapper, body.scbt-youtube.scbt-mobile #scbtfeature7Wrapper, body.scbt-youtube.scbt-mobile #scbtfeature8Wrapper, body.scbt-youtube.scbt-mobile #scbtfeature9Wrapper {
+     display: none;
+}
+ .scbt-options-wrapper.scbt-bl {
+     display: block;
+}

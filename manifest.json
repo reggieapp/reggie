@@ -1,0 +1,84 @@
+{
+    "manifest_version": 3,
+    "name": "Reggie",
+    "version": "1.0.0",
+
+    "action": {
+      "default_title": "Click to open the Reggie menu to configure this live stream"
+    },
+
+    "description": "Reggie provides extra features for Youtube live stream chats.",
+     "icons": {
+        "16": "logo/icon16.png",
+        "48": "logo/icon48.png",
+        "128": "logo/icon128.png"
+    },
+
+    "background": {
+        "service_worker": "background.js"
+    },
+    
+    "content_scripts": [{
+        "all_frames": true,
+        "css": ["styles.css"],
+        "js": ["foreground.js"],
+        "matches": ["https://www.youtube.com/*", "https://m.youtube.com/*"],
+        "exclude_matches": ["https://www.youtube.com/improvedtube", "https://www.youtube.com/tv*", "https://www.youtube.com/audiolibrary/*", "http://studio.youtube.com/*", "https://www.youtube.com/feed/*", "https://www.youtube.com/embed/*"],
+        "run_at": "document_end"
+    }],
+
+
+
+     "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self';",
+        "extension_page": "script-src 'self'; object-src 'self';",
+        "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';"
+    },
+    "cross_origin_opener_policy": {"value": "same-origin"},
+    "current_locale": "en",
+    "homepage_url": "https://reggieapp.github.io",
+    "author": "biolithic",
+    "offline_enabled": true,
+    "options_page": "settings/settings.html",
+    "permissions": ["storage", "activeTab", "scripting", "tabs", "nativeMessaging"],
+    "host_permissions": [
+        "*://*/*"
+    ],
+    
+  "web_accessible_resources": [
+      {
+        "resources": [
+          "chat_menu.html",
+          "options_menu.html",
+          "side_menu_youtube.html",
+          "wrappers_menu.html",
+          "socialmedia.json",
+          "sexualterms.json",
+          "profanity.json",
+          "political.json",
+          "negative.json"
+        ],
+        "matches": ["*://*/*"]
+      }
+    ],
+
+  "commands": {
+    "reggiecommand1": {
+      "suggested_key": "Alt+1",
+      "description": "Show/Hide Live Stream Chat"
+    }, 
+    "reggiecommand2": {
+      "suggested_key": "Alt+2",
+      "description": "Show/Hide Recorded Live Stream Chat"
+    }, 
+    "reggiecommand3": {
+      "suggested_key": "Alt+3",
+      "description": "Search This Live Stream Chat"
+    }, 
+    "reggiecommand4": {
+      "suggested_key": "Alt+4",
+      "description": "Search All Recorded Live Stream Chat"
+    }
+  }
+
+}
