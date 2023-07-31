@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Reggie",
-    "version": "1.0.0",
+    "version": "1.0.3",
 
     "action": {
       "default_title": "Click to open the Reggie menu to configure this live stream"
@@ -26,8 +26,6 @@
         "exclude_matches": ["https://www.youtube.com/improvedtube", "https://www.youtube.com/tv*", "https://www.youtube.com/audiolibrary/*", "http://studio.youtube.com/*", "https://www.youtube.com/feed/*", "https://www.youtube.com/embed/*"],
         "run_at": "document_end"
     }],
-
-
 
      "content_security_policy": {
         "extension_pages": "script-src 'self'; object-src 'self';",
@@ -58,7 +56,7 @@
           "political.json",
           "negative.json"
         ],
-        "matches": ["*://*/*"]
+        "matches": ["https://www.youtube.com/*", "https://m.youtube.com/*"]
       }
     ],
 
