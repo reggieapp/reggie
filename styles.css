@@ -47,7 +47,7 @@
 .scbtOptionsSavedWrapper .round-button:active, 
 .scbtOptionsSavedWrapper .round-button.focused
 {
-     background: lawngreen !important;
+     background: #ff0000 !important;
 }
 
 .scbt-options-wrapper, 
@@ -92,11 +92,12 @@
 .scbtChatPreviousContent span, 
 .scbtToggleButton2,
 .scbtSideMenu button, 
-.scbtChatToggleMenu span, 
+.scbtChatToggleMenu button, 
 .scbtCloseButton,
 .scbtChatMenu button,
 .scbtOptionsMenu button,
-.scbt-kick .scbt-speed li,
+.scbt-kick .scbt-speed li
+.scbt-options-title
 {
     cursor: pointer;
 }
@@ -161,14 +162,14 @@
 .scbtSideMenu button, .scbtChatToggleMenu button {
     display: inline-block;
     width: 40px;
-    height: 45px;
+    height: 40px;
     font-size: 1.75rem;
 }
 
 .scbtChatWrapper {
     display: block;
     position: absolute;
-    background: #222;
+    background: #ccc;
     height: 300px;
     z-index: 10000;
     overflow-y: scroll;
@@ -268,11 +269,11 @@
 }
 
 .scbt-desktop .scbtChatToggleMenu {
-     top: 45px;
+     top: 41px;
 }
 
 .scbt-desktop .scbtSideMenu button, .scbt-desktop .scbtChatToggleMenu button {
-     font-size: 1.25rem;
+     font-size: 1.5rem;
      width: fit-content;
 }
 
@@ -292,12 +293,13 @@
 
 .scbt-desktop .scbtChatTitle {
      left: unset;
-     right: 80px;
-     top: 70px;
+     right: 0px;
+     top: 100px;
+     font-size: 1.3rem;
 }
 
 .scbtOptionsMenuForm > div {
-    max-height: 100px;
+    max-height: 120px;
     overflow: scroll;    
 }
 
@@ -311,10 +313,123 @@
 }
  
 .scbtOptionsMenuForm > div::-webkit-scrollbar-thumb {
-  background: lawngreen; 
+  background: #ff0000; 
   border-radius: 10px;
 }
 
 .scbtOptionsMenuForm > div::-webkit-scrollbar-thumb:hover {
-  background: darkgreen; 
+  background: maroon; 
 }
+
+
+
+
+.scbt-options-wrapper {
+    background-color: darkgrey;
+}
+
+.scbtOptionsMenuForm > div.scbt-options-title {
+    overflow: hidden;
+}
+
+.scbtChatWrapper {
+    background-color: #222;
+}
+
+
+.scbt-youtube.scbt-desktop .scbtOptionsMenu {
+    z-index: 100000;
+    position: absolute;
+    background-color: grey;
+    font-size: 1.5rem;
+}
+
+.scbt-youtube.scbt-desktop .scbt-options-title {
+    font-size: 3rem;
+}
+
+.scbt-youtube.scbt-desktop .scbtChatMenu {
+    z-index: 10000000000;
+    right: 345px;
+}
+
+
+.scbt-youtube.scbt-desktop .scbtChatWrapper {
+    padding-left: 4px;
+    padding-top: 20px;
+}
+
+
+.scbt-youtube.scbt-mobile .scbtX {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 100000;
+}
+
+.scbt-youtube.scbt-mobile .scbtToggleButton2 {
+    background-color: #ff0000;
+    position: fixed;
+}
+
+.scbt-youtube.scbt-mobile .scbtSideMenu {
+    top: 0px;
+    left: 0px;
+    width: fit-content;
+}
+
+.scbt-youtube.scbt-mobile .scbtOptionsMenu {
+    background: #000;
+    padding-top: 4rem;
+    opacity: .85;
+}
+
+.scbt-youtube.scbt-mobile .scbtOptionsMenuForm > p > small, .scbt-youtube.scbt-mobile #scbtfeature4, .scbt-youtube.scbt-mobile .scbtOptionsMenuForm label:first-of-type  {
+    display: none;
+}
+
+.scbt-youtube.scbt-mobile .scbt-options-wrapper {
+    background-color: #333;
+}
+
+.scbt-youtube.scbt-mobile .scbtChatWrapper.scbt-bl, .scbt-youtube.scbt-mobile .scbtChatTitle {
+    position: fixed;
+    top: unset;
+    bottom: 0px;
+    width: 92%;
+}
+
+.scbt-youtube.scbt-mobile .scbtChatTitle {
+    width: 92%;
+    position: fixed;
+    top: unset;
+    bottom: 280px;
+}
+
+.scbt-youtube.scbt-mobile .scbtChatToggleMenu {
+    top: 47px
+}
+
+
+.scbt-youtube.scbt-mobile .scbtChatMenu {
+    top: unset;
+    position: fixed;
+    bottom: 310px;
+}
+
+.scbt-youtube .scbtChatPreviousContent p {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.scbt-youtube .scbtChatContent {
+    font-size: 1.5rem;
+}
+
+.scbt-youtube .scbt-chat-timestamp, .scbt-youtube .scbt-chat-username {
+    opacity: .7;
+}
+
+
+
+

@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Reggie",
-    "version": "1.0.3",
+    "version": "2.0.0",
 
     "action": {
       "default_title": "Click to open the Reggie menu to configure this live stream"
@@ -34,7 +34,7 @@
     },
     "cross_origin_opener_policy": {"value": "same-origin"},
     "current_locale": "en",
-    "homepage_url": "https://reggieapp.github.io",
+    "homepage_url": "https://ReggieApp.github.io",
     "author": "biolithic",
     "offline_enabled": true,
     "options_page": "settings/settings.html",
