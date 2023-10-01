@@ -4518,7 +4518,7 @@ function scbt_handler_sort_saved_streams_by_current(e) {
   }
   
   for (var i = 0; i < arrl; i++) {
-    if (window.scbtSavedStreamsArr[i].channelid == str) {
+    if (window.scbtSavedStreamsArr[i].channelid.toLowerCase() == str) {
       arr.unshift(window.scbtSavedStreamsArr[i]);
     } else {
       arr.push(window.scbtSavedStreamsArr[i]);
